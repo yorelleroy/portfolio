@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { skills } from '../data';
-import { FaGithub } from 'react-icons/fa';
 
 const Skills = () => {
 	return (
