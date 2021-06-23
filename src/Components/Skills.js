@@ -40,9 +40,6 @@ const Container = styled.div`
 			text-align: center;
 		}
 
-		&:last-child {
-			grid-column: span 1;
-		}
 		.img {
 			margin-top: 1rem;
 			font-size: 3.5rem;

@@ -4,12 +4,7 @@ import ComfySlothIMG from './images/Comfy-Sloth.jpg';
 
 import { FaHtml5, FaCss3, FaReact, FaBootstrap } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io5';
-import {
-	SiRedux,
-	SiTailwindcss,
-	SiMaterialUi,
-	SiStyledComponents,
-} from 'react-icons/si';
+import { SiRedux, SiTailwindcss, SiMaterialUi } from 'react-icons/si';
 
 export const navLinks = [
 	{ id: 1, name: 'projects', link: '#projects' },
@@ -87,9 +82,5 @@ export const skills = [
 	{
 		name: 'material UI',
 		logo: <SiMaterialUi />,
-	},
-	{
-		name: 'styled components',
-		logo: <SiStyledComponents />,
 	},
 ];

@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import { navLinks } from '../data';
 import { Intro } from './index';
+import { FaBars } from 'react-icons/fa';
 
-const Nav = () => {
-	console.log(navLinks);
+const Nav = ({ sidebarToggle }) => {
 	return (
 		<header>
 			<NavContainer className="section-center">
@@ -11,6 +11,16 @@ const Nav = () => {
 					<a href="/">
 						<h5>Portfolio</h5>
 					</a>
+				</div>
+				<div className="btn-bars">
+					<button
+						type="button"
+						onClick={() => {
+							sidebarToggle();
+						}}
+					>
+						<FaBars />
+					</button>
 				</div>
 				<div className="links">
 					<ul>
@@ -45,7 +55,8 @@ const NavContainer = styled.nav`
 	padding: 2rem;
 	z-index: 1000;
 
-	.links {
+	.links,
+	.btn-bars {
 		margin-left: auto;
 	}
 
@@ -54,6 +65,29 @@ const NavContainer = styled.nav`
 	}
 	li:not(:last-of-type) {
 		margin: 0 4rem 0 0;
+	}
+	button {
+		margin-right: 2rem;
+		font-size: 1.5rem;
+
+		height: 100%;
+		padding: 0.2rem 0 0 0;
+	}
+
+	@media screen and (max-width: 1220px) {
+		.links {
+			display: none;
+		}
+
+		button {
+			display: block;
+		}
+	}
+
+	@media screen and (min-width: 1221px) {
+		button {
+			display: none;
+		}
 	}
 `;
 

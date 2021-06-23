@@ -5,4 +5,5 @@ import About from './About';
 import Skills from './Skills';
 import Contact from './Contact';
 import Footer from './Footer';
-export { About, Intro, Navbar, Projects, Skills, Contact, Footer };
+import Sidebar from './Sidebar';
+export { About, Intro, Navbar, Projects, Skills, Contact, Footer, Sidebar };
