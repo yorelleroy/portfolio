@@ -9,7 +9,7 @@ import {
 	Footer,
 } from './Components/index';
 function App() {
-	const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+	const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
 	const sidebarToggle = () => {
 		setIsSidebarOpen(prev => !isSidebarOpen);
