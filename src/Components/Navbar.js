@@ -51,7 +51,7 @@ const NavContainer = styled.nav`
 	right: 0;
 
 	margin: auto;
-	max-width: 85rem;
+
 	padding: 2rem;
 	z-index: 1000;
 

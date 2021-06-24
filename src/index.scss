@@ -36,23 +36,24 @@ body {
 // fonts
 
 h1 {
-	font-size: 5rem;
+	// font-size: 5rem;
+	font-size: clamp(2rem, 10vw, 5rem);
 }
 
 h2 {
-	font-size: 4rem;
+	font-size: clamp(1.7rem, 8vw, 4rem);
 }
 
 h3 {
-	font-size: 3rem;
+	font-size: clamp(1.5rem, 6vw, 3rem);
 }
 
 h4 {
-	font-size: 2rem;
+	font-size: clamp(1.2rem, 4vw, 2rem);
 }
 
 h5 {
-	font-size: 1.5rem;
+	font-size: clamp(1rem, 3vw, 1.5rem);
 }
 
 // button
@@ -67,8 +68,7 @@ button {
 .section-center {
 	max-width: 85rem;
 	margin: auto;
-	padding: 0 2rem;
-	padding-top: 1rem;
+	padding: 0 1.5rem;
 }
 
 .full-height {

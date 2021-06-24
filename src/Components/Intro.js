@@ -18,14 +18,14 @@ const Intro = () => {
 
 const IntroWrapper = styled.div`
 	.grid-container {
-		height: 50vh;
+		height: auto;
 		padding-top: 9rem;
 		display: grid;
 	}
 
 	.intro-text {
 		text-align: center;
-		margin-top: 5rem;
+		margin-top: clamp(2rem, 5vw, 5rem);
 	}
 `;
 

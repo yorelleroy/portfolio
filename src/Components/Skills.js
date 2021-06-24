@@ -25,13 +25,13 @@ const Skills = () => {
 
 const Container = styled.div`
 	height: auto;
-
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(270px, auto));
+	grid-template-columns: repeat(auto-fill, minmax(100px, auto));
 	/* grid-template-rows: minmax(200px, auto); */
 
-	grid-gap: 5rem 2rem;
+	grid-gap: 1rem 2rem;
 	place-items: center;
+	justify-content: center;
 
 	.skill-item {
 		place-self: center;
@@ -42,17 +42,27 @@ const Container = styled.div`
 
 		.img {
 			margin-top: 1rem;
-			font-size: 3.5rem;
+			font-size: clamp(1.5rem, 5vw, 3.5rem);
 			color: rgba(0, 0, 0, 0.7);
 		}
 
 		h5 {
 			margin-top: 1rem;
-			font-size: 1.3rem;
+
 			font-weight: 400;
 			text-transform: uppercase;
 			letter-spacing: 0.1rem;
 		}
+	}
+
+	@media screen and (min-width: 412px) {
+		grid-template-columns: repeat(auto-fill, minmax(150px, auto));
+		grid-gap: 2rem 4rem;
+	}
+
+	@media screen and (min-width: 842px) {
+		grid-template-columns: repeat(auto-fill, minmax(200px, 250px));
+		grid-gap: 2rem 4rem;
 	}
 `;
 

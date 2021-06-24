@@ -68,7 +68,7 @@ export const skills = [
 		logo: <FaReact />,
 	},
 	{
-		name: 'redux / context api',
+		name: 'context api',
 		logo: <SiRedux />,
 	},
 	{
