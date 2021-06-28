@@ -49,9 +49,6 @@ const NavContainer = styled.nav`
 	position: fixed;
 	left: 0;
 	right: 0;
-
-	margin: auto;
-
 	padding: 2rem;
 	z-index: 1000;
 
@@ -72,9 +69,13 @@ const NavContainer = styled.nav`
 
 		height: 100%;
 		padding: 0.2rem 0 0 0;
+
+		cursor: pointer;
 	}
 
 	@media screen and (max-width: 1220px) {
+		height: 2rem;
+
 		.links {
 			display: none;
 		}

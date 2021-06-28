@@ -102,8 +102,8 @@ const Container = styled.div`
 
 			.github {
 				padding: clamp(0.25rem, 1vw, 0.6rem) clamp(0.5rem, 1.2vw, 0.7rem);
-				border: 1px solid;
-				border-radius: 50%;
+				border: 1px solid rgba(0, 0, 0, 0.5);
+				border-radius: 5px;
 				color: gray;
 				font-size: clamp(1rem, 4vw, 2rem);
 				max-height: 2.1rem;

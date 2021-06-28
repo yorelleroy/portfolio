@@ -6,7 +6,6 @@ import {
 	// About,
 	Skills,
 	Contact,
-	Footer,
 } from './Components/index';
 function App() {
 	const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -24,7 +23,6 @@ function App() {
 			{/* <About /> */}
 			<Skills />
 			<Contact />
-			<Footer />
 		</>
 	);
 }

@@ -7,11 +7,11 @@
 :after {
 	padding: 0;
 	margin: 0;
-	box-sizing: content-box;
 }
 
 html {
 	scroll-behavior: smooth;
+	scroll-margin-top: 5rem;
 }
 
 ul {
@@ -23,6 +23,7 @@ a {
 	color: inherit;
 	font-family: inherit;
 }
+
 a:visited {
 	color: inherit;
 }
@@ -69,6 +70,11 @@ button {
 	max-width: 85rem;
 	margin: auto;
 	padding: 0 1.5rem;
+	scroll-margin-top: 9rem;
+
+	@media screen and (max-width: 1220px) {
+		scroll-margin-top: 7rem;
+	}
 }
 
 .full-height {

@@ -56,11 +56,16 @@ const Container = styled.div`
 	}
 
 	@media screen and (min-width: 412px) {
-		grid-template-columns: repeat(auto-fill, minmax(150px, auto));
+		grid-template-columns: repeat(auto-fill, minmax(160px, auto));
+		grid-gap: 2rem 2rem;
+	}
+
+	@media screen and (min-width: 588px) {
+		grid-template-columns: repeat(auto-fill, minmax(200px, auto));
 		grid-gap: 2rem 4rem;
 	}
 
-	@media screen and (min-width: 842px) {
+	@media screen and (min-width: 742px) {
 		grid-template-columns: repeat(auto-fill, minmax(200px, 250px));
 		grid-gap: 2rem 4rem;
 	}
