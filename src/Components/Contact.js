@@ -4,8 +4,6 @@ import styled from 'styled-components';
 const Contact = () => {
 	const [state, handleSubmit] = useForm('xayabekn');
 
-	console.log(state.errors[0]);
-
 	return (
 		<section className="section-center" id="contact">
 			<div className="title">
@@ -53,8 +51,7 @@ const Contact = () => {
 						</p>
 					) : (
 						state.errors.map((error, index) => {
-							const { message, code } = error;
-
+							const { code } = error;
 							if (code === 'TYPE_EMAIL')
 								return (
 									<p key={index} className="failed feedback-msg">
@@ -70,7 +67,7 @@ const Contact = () => {
 };
 
 const Container = styled.div`
-	height: 40rem;
+	height: 45rem;
 
 	form {
 		max-width: 35rem;
@@ -89,7 +86,7 @@ const Container = styled.div`
 		font-size: clamp(0.8rem, calc(1vw + 0.5rem), 1.3rem);
 		padding: 0.5rem 0.8rem;
 		box-sizing: border-box;
-		resize: vertical;
+		resize: none;
 		margin: 0.2rem 0 1rem 0;
 		font-family: inherit;
 		border: 2px solid rgba(0, 0, 0, 0.5);

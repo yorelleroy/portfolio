@@ -3,7 +3,6 @@ import { navLinks } from '../data';
 import { FaRegWindowClose } from 'react-icons/fa';
 
 const Sidebar = ({ isSidebarOpen, sidebarToggle }) => {
-	console.log(isSidebarOpen);
 	return (
 		<SidebarContainer
 			onClick={() => {
@@ -52,6 +51,8 @@ const SidebarContainer = styled.div`
 		transform: translateX(100%);
 		background-color: white;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+		transition: all 0.4s ease-in-out;
 	}
 
 	h5 {
@@ -68,7 +69,7 @@ const SidebarContainer = styled.div`
 
 	button {
 		font-size: 1.5rem;
-
+		background-color: white;
 		height: 100%;
 		padding: 0.2rem 0 0 0;
 	}

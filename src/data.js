@@ -16,7 +16,7 @@ export const navLinks = [
 export const projects = [
 	{
 		id: 1,
-		name: 'comfy sloth',
+		name: 'E-Commerce',
 		image: ComfySlothIMG,
 		text: 'web e-commerce app complete with login feature and payment function ',
 		github: 'https://github.com/yorelleroy/Comfy-sloth',
