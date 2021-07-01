@@ -19,8 +19,6 @@ function App() {
 			<Navbar isSidebarOpen={isSidebarOpen} sidebarToggle={sidebarToggle} />
 			<Sidebar isSidebarOpen={isSidebarOpen} sidebarToggle={sidebarToggle} />
 			<Projects />
-
-			{/* <About /> */}
 			<Skills />
 			<Contact />
 		</>

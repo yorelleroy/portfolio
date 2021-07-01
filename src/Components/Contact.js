@@ -1,14 +1,10 @@
 import { useForm, ValidationError } from '@formspree/react';
 import styled from 'styled-components';
-import { useEffect } from 'react';
 
 const Contact = () => {
 	const [state, handleSubmit] = useForm('xayabekn');
-	console.log(state.errors);
 
-	useEffect(() => {
-		console.log(state);
-	}, [state]);
+	console.log(state.errors[0]);
 
 	return (
 		<section className="section-center" id="contact">
@@ -16,7 +12,7 @@ const Contact = () => {
 				<h3>Contact</h3>
 			</div>
 			<Container>
-				<form onSubmit={() => handleSubmit}>
+				<form onSubmit={handleSubmit}>
 					<label id="firstName">First Name</label>
 					<input id="firstName" name="firstName" />
 
@@ -24,8 +20,20 @@ const Contact = () => {
 					<input id="lastName" name="lastName" />
 
 					<label htmlFor="email">Email Address</label>
-					<input id="email" type="email" name="email" />
-					<ValidationError prefix="Email" field="email" errors={state.errors} />
+					<ValidationError
+						prefix="Email"
+						field="email"
+						errors={state.errors}
+						style={{ color: 'red', marginTop: '.5rem' }}
+					/>
+					<input
+						id="email"
+						type="email"
+						name="email"
+						required
+						errors={state.errors}
+						className={`${state.errors[0] > [0] ? 'input-error' : ''}`}
+					/>
 
 					<label id="message">Message</label>
 					<textarea id="message" name="message" />
@@ -38,14 +46,25 @@ const Contact = () => {
 					<button type="submit" disabled={state.submitting}>
 						Submit
 					</button>
-					<p>{state.errors}</p>
+
+					{state.succeeded ? (
+						<p className="success feedback-msg">
+							Thank you! I will get back to you as soon as I can.
+						</p>
+					) : (
+						state.errors.map((error, index) => {
+							const { message, code } = error;
+
+							if (code === 'TYPE_EMAIL')
+								return (
+									<p key={index} className="failed feedback-msg">
+										Please enter a valid email
+									</p>
+								);
+						})
+					)}
 				</form>
 			</Container>
-			<div>
-				<a href="/Resume.pdf" target="_blank">
-					resume
-				</a>
-			</div>
 		</section>
 	);
 };
@@ -76,6 +95,10 @@ const Container = styled.div`
 		border: 2px solid rgba(0, 0, 0, 0.5);
 	}
 
+	.input-error {
+		border: 2px solid red;
+	}
+
 	button {
 		border: 1px solid;
 		border-radius: 5px;
@@ -84,6 +107,19 @@ const Container = styled.div`
 		background-color: rgba(0, 0, 0, 0.3);
 		color: white;
 		cursor: pointer;
+	}
+
+	.feedback-msg {
+		padding: 1rem;
+		margin-top: 1rem;
+	}
+
+	.success {
+		background-color: lightgreen;
+	}
+
+	.failed {
+		background-color: lightpink;
 	}
 `;
 

@@ -5,10 +5,10 @@ import { FaBars } from 'react-icons/fa';
 
 const Nav = ({ sidebarToggle }) => {
 	return (
-		<header>
+		<header id="home">
 			<NavContainer className="section-center">
 				<div>
-					<a href="/">
+					<a href="#home">
 						<h5>Portfolio</h5>
 					</a>
 				</div>
@@ -42,7 +42,7 @@ const Nav = ({ sidebarToggle }) => {
 
 const NavContainer = styled.nav`
 	display: flex;
-	align-items: end;
+	align-items: flex-end;
 
 	background-color: white;
 	height: 5rem;
