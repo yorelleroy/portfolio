@@ -8,7 +8,8 @@ import { SiRedux, SiTailwindcss, SiMaterialUi } from 'react-icons/si';
 
 export const navLinks = [
 	{ id: 1, name: 'projects', link: '#projects' },
-	{ id: 2, name: 'about', link: '#about' },
+	// { id: 2, name: 'about', link: '#about' },
+	{ id: 2, name: 'resume', link: '/Le Roy Angel Lazala Resume.pdf' },
 	{ id: 3, name: 'skills', link: '#skills' },
 	{ id: 4, name: 'contact', link: '#contact' },
 ];
