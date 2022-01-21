@@ -25,6 +25,7 @@ const Nav = ({ sidebarToggle }) => {
 		} else {
 			setHideNav(false);
 		}
+		prevScrollPos = currentScrollPos;
 	};
 
 	window.addEventListener('scroll', navScroll);
@@ -50,7 +51,7 @@ const Nav = ({ sidebarToggle }) => {
 					</div>
 					<div className="links">
 						<ul>
-							{navLinks.map(navItem => {
+							{navLinks.map((navItem) => {
 								const { id, name, link } = navItem;
 								return (
 									<li key={id}>

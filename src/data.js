@@ -1,4 +1,4 @@
-import ComfySlothIMG from './images/Comfy-Sloth.jpg';
+import ComfySlothIMG from './images/Roy-Furniture.png';
 // import BirthdayReminderIMG from './images/Birthday-Reminder.jpg';
 // import CocktailsIMG from './images/Cocktails.jpg';
 
@@ -11,20 +11,20 @@ export const navLinks = [
 	// { id: 2, name: 'about', link: '#about' },
 	{ id: 2, name: 'resume', link: '/Le Roy Angel Lazala Resume.pdf' },
 	{ id: 3, name: 'skills', link: '#skills' },
-	{ id: 4, name: 'contact', link: '#contact' },
+	{ id: 4, name: 'contact', link: '#contact' }
 ];
 
 export const projects = [
 	{
 		id: 1,
-		name: 'E-Commerce',
+		name: 'Roy Furniture',
 		image: ComfySlothIMG,
-		text: 'web e-commerce app complete with login feature and payment function ',
+		text: 'web e-commerce app complete with login and payment features',
 		github: 'https://github.com/yorelleroy/Comfy-sloth',
-		demo: 'https://comfy-sloth.vercel.app/',
+		demo: 'https://roy-furniture.netlify.app/',
 		tag: ['react', 'auth0', 'stripe', 'context api'],
-		size: 'big',
-	},
+		size: 'big'
+	}
 
 	// {
 	// 	id: 2,
@@ -54,36 +54,36 @@ export const projects = [
 export const skills = [
 	{
 		name: 'html',
-		logo: <FaHtml5 />,
+		logo: <FaHtml5 />
 	},
 	{
 		name: 'css / sass',
-		logo: <FaCss3 />,
+		logo: <FaCss3 />
 	},
 	{
 		name: 'javascript',
-		logo: <IoLogoJavascript />,
+		logo: <IoLogoJavascript />
 	},
 	{
 		name: 'react',
-		logo: <FaReact />,
+		logo: <FaReact />
 	},
 	{
 		name: 'context api',
-		logo: <SiRedux />,
+		logo: <SiRedux />
 	},
 	{
 		name: 'bootstrap',
-		logo: <FaBootstrap />,
+		logo: <FaBootstrap />
 	},
 	{
 		name: 'tailwind',
-		logo: <SiTailwindcss />,
+		logo: <SiTailwindcss />
 	},
 	{
 		name: 'material UI',
-		logo: <SiMaterialUi />,
-	},
+		logo: <SiMaterialUi />
+	}
 ];
 
 //test
